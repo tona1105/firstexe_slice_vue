@@ -26,7 +26,7 @@
                 </div>
             </div>
         </nav>
-        <carousel ref="carouselHeader" class="intro container" v-bind="settings">
+        <carousel ref="carouselHeader" class="intro container" v-bind="settings" :transition="1000">
             <slide class="introduce item carousel__item">
                 <div class="introduce__content">
                     <h1 class="introduce__title">WE CREATE AMAZING SITES WITH EASE</h1>
@@ -166,7 +166,8 @@ export default {
     data: () => ({
         settings: {
             itemToShow: 1,
-            snapAlign: 'center'
+            snapAlign: 'center',
+      
         },
         currentSlide: 1,
         totalSlide:  2,

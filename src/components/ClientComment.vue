@@ -31,7 +31,8 @@
                 </div>
                 <div class="client__content">
                     <swiper ref="carouselClient" style="width: 100%" v-bind="settings" :slider-per-view="1"
-                        :space-between="30" :slidesPerGroupSkip="1" :modules="modules" @swiper="onSwiper">
+                        :space-between="30" :slidesPerGroupSkip="1" :modules="modules" @swiper="onSwiper" :speed="500"
+                        :loop="true">
                         <swiper-slide class="client__block item">
                             <div class="client__ava">
                                 <img src="@/assets/img/client1.png" alt="">
