@@ -27,23 +27,25 @@
                     </div>
                     <div class="project__select">
                         <p>PORTFLOLIO</p>
-                        <select id="select" name="option">
-                            <option value="0">All</option>
-                            <option value="1">Design</option>
-                            <option value="3">Development</option>
-                            <option value="2">Branding</option>
-                            <option value="4">Products</option>
+                        <select id="select" v-model="selectedCategory" name="option" @change="chooseCategoryMB">
+                            <option v-for="(item, index) in listCategory" :key="index">
+                                <div :id="index">
+                                    {{ item }}
+                                </div>
+                            </option>
+
                         </select>
                     </div>
                     <div>
                         <div id="project__json" class="">
-                            <div  v-for="(item, index) in filterListProjectToShow" :key="index" :style="{animation: 'show 1s'}">
-                            <ProjectItem :item="item"/>
+                            <div v-for="(item, index) in filterListProjectToShow" :key="index"
+                                :style="{ animation: 'show 1s' }">
+                                <ProjectItem :item="item" />
                             </div>
                         </div>
                         <div class="project__button">
                             <div class="project__button--pink" @click="handleShowMore"
-                            :style="{display: showMore ? 'none' : ''}">
+                                :style="{ display: showMore ? 'none' : '' }">
                                 LOAD MORE
                             </div>
                         </div>
@@ -68,6 +70,7 @@ export default {
         const arrFilter = ref([])
         var showMore = ref(false)
         var idClicked = ref('0')
+        var selectedCategory = ref('')
         // Filter Project
         const chooseCategory = (event) => {
             // show button ShowMore
@@ -75,6 +78,9 @@ export default {
             // set id clicked
             idClicked.value = event.target.id
             // start filter
+            filterProject()
+        }
+        const filterProject = () => {
             if (idClicked.value !== '0') {
                 arrFilter.value = listProject.value.filter(item => item.categoryid.toString() === idClicked.value)
                 filterListProjectToShow.value = arrFilter.value
@@ -84,8 +90,29 @@ export default {
                 arrFilter.value = listProject.value.filter(item => item.categoryid.toString() === '1' || item.categoryid.toString() === '3')
                 filterListProjectToShow.value = arrFilter.value
             }
-
-
+        }
+        const chooseCategoryMB = () => {
+            switch (selectedCategory.value) {
+                case 'All':
+                    idClicked.value = '0';
+                    break;
+                case 'Design':
+                    idClicked.value = '1';
+                    break;
+                case 'Development':
+                    idClicked.value = '2';
+                    break;
+                case 'Branding':
+                    idClicked.value = '3';
+                    break;
+                case 'Products':
+                    idClicked.value = '4';
+                    break;
+                default:
+                    // Handle the default case if necessary
+                    break;
+            }
+            filterProject()
         }
         const getData = async () => {
             try {
@@ -104,7 +131,7 @@ export default {
         }
         const handleShowMore = () => {
             // show more by condition id
-            if(idClicked.value === '0') {
+            if (idClicked.value === '0') {
                 arrFilter.value = listProject.value.filter(item => item.categoryid.toString() !== '1' || item.categoryid.toString() !== '3')
                 filterListProjectToShow.value.push(...arrFilter.value)
                 showMore.value = true
@@ -117,12 +144,16 @@ export default {
         onMounted(() => {
             getData()
         })
-        return { idClicked, chooseCategory, listCategory, listProject, handleShowMore, filterListProjectToShow, showMore }
+        return {
+            idClicked, selectedCategory,
+            chooseCategory, listCategory, listProject, handleShowMore, filterListProjectToShow, showMore,
+            chooseCategoryMB
+        }
     },
     components: {
         ProjectItem
     }
-    
+
 
 }
 </script>

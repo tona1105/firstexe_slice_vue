@@ -145,6 +145,11 @@ export default {
             },
             800: {
                 itemsToShow: 2,
+                itemsToScroll: 2
+            },
+            1024: {
+                itemsToShow: 2,
+                itemsToScroll: 1,
             }
         }
     })

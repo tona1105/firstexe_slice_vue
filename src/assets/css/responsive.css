@@ -281,6 +281,7 @@
     }
 
     .client__content {
+        width: 200%;
         top: -150px;
         left: 0px;
     }
@@ -310,7 +311,7 @@
     }
 
     .page-direction2 {
-        left: 120px;
+        left: 150px;
         bottom:-129px;;
         top: unset;
         
@@ -438,11 +439,6 @@
         width: calc(100vw) !important
     }
 
-    .feature__content > .carousel__viewport > .carousel__track > .carousel__slide {
-        width: 100% !important;
-        margin-right: unset;
-    }
-
     #myBtn {
         bottom: 30px;
         right: 10%;
@@ -451,12 +447,8 @@
     .intro>.carousel__viewport>.carousel__track>.carousel__slide {
         display:  block;
     }
-    .feature__content > .carousel__viewport > .carousel__track > .carousel__slide {
-        width: 100% !important;
-        margin-right: unset !important;
-    }
-    .client__content>.carousel__viewport>.carousel__track>.carousel__slide {
-      
+    .feature__content> .carousel__viewport>.carousel__track>.carousel__slide {
+      display: block;
     }
 }
 
@@ -512,6 +504,9 @@
         width: 100% !important;
         margin-right: unset !important;
     }
+    .client__content> .carousel__viewport>.carousel__track>.carousel__slide {
+        display: block;
+      }
 
 }
 @media (min-width: 1025px){
