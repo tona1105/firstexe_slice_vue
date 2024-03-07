@@ -167,6 +167,7 @@ export default {
         settings: {
             itemToShow: 1,
             snapAlign: 'center',
+            wrapAround: true
       
         },
         currentSlide: 1,
@@ -179,12 +180,16 @@ export default {
             if(this.currentSlide !== this.totalSlide) {
                 this.currentSlide++
             }
+            else {
+                this.currentSlide = 1
+            }
         },
         prevSlide() {
             this.$refs.carouselHeader.prev()
             if(this.currentSlide !== 1) {
                 this.currentSlide--
             }
+            else this.currentSlide = this.totalSlide
         }
     }
 
