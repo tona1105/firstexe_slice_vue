@@ -1,0 +1,53 @@
+{
+    "data": [
+        {
+            "categoryid": 1,       
+            "title": "DESIGN",
+            "description": "CREATIVE TEMPLATE",
+            "imgsrc": "design.png",
+            "bgcolor": "#F8E71C",
+            "color": "var(--black)"
+        },
+        {
+            "categoryid": 2,       
+            "title": "DEVELOPMENT",
+            "description": "GOOD QUALITY",
+            "imgsrc": "design.png",
+            "bgcolor": "#F8E71C",
+            "color": "var(--black)"
+        },
+        {
+            "categoryid": 2,       
+            "title": "123DEVELOPMENT",
+            "description": "GOOD QUALITY",
+            "imgsrc": "design.png",
+            "bgcolor": "#F8E71C",
+            "color": "var(--black)"
+        
+        },
+        {
+            "categoryid": 3,       
+            "title": "BRANDING",
+            "description": "AMAZING STARTUP",
+            "imgsrc": "branding.png",
+            "bgcolor": "#FF564F",
+            "color": "var(--white)"
+        },
+        {
+            "categoryid": 4,       
+            "title": "PRODUCTS",
+            "description": "FANTASTIC PRODUCTS",
+            "imgsrc": "branding.png",
+            "bgcolor": "#FF564F",
+            "color": "var(--white)"
+        },
+        {
+            "categoryid": 4,       
+            "title": "312PRODUCTS",
+            "description": "FANTASTIC PRODUCTS",
+            "imgsrc": "branding.png",
+            "bgcolor": "#FF564F",
+            "color": "var(--white)"
+        }
+    ]
+}
