@@ -1,10 +1,16 @@
 <template>
    <IntroAdvantage/>
-   <OurFeature/>
+   <!-- Feature -->
+    <OurFeature/>
+   <!-- Project -->
    <OurProject/>
+   <!-- Client Comment -->
    <ClientComment/>
+   <!-- Logo -->
    <LogoBrand/>
+   <!-- Blog -->
    <OurBlog/>
+   <!-- Footer -->
    <FooterProject/>
 </template>
 
@@ -25,11 +31,18 @@ export default {
     ClientComment,
     LogoBrand,
     OurBlog,
-    FooterProject
+    FooterProject,
+    
   }
 }
 </script>
 
 <style>
-
+.v-lazy-component.v-lazy-component--loading{
+  filter: blur(20px);
+}
+.v-lazy-component.v-lazy-component--loaded {
+  filter: blur(0);
+  transition: filter 2s;
+}
 </style>

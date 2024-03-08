@@ -1,28 +1,30 @@
 <template>
     <!-- Header + Intro -->
     <section class="bg--black">
-        <nav class="container">
-            <div class="nav">
-                <div class="nav__title">
-                    <a href="#">AGENCY</a>
-                </div>
-                <div class="nav__menu">
-                    <span>About</span>
-                    <a href="#portfolio"><span>Portfolio</span></a>
-                    <a href="#contact"> <span>Contact</span></a>
-                </div>
-                <div class="nav__menu--mobile" >
-                    <span class="menu__icon" @click="openNavBar">
-                        <img src="@/assets/img/menu.png" alt="">
-                    </span>
-                    <div class="menu__list"  :class="{'show': toggleNavBar}">
-                        <img id="close-menu" src="@/assets/img/x.png" alt="" style="padding: 0px 35px;"
-                        @click="closeNavBar">
+        <nav>
+            <div class="container">
+                <div class="nav">
+                    <div class="nav__title">
+                        <a href="#">AGENCY</a>
+                    </div>
+                    <div class="nav__menu">
                         <span>About</span>
                         <a href="#portfolio"><span>Portfolio</span></a>
                         <a href="#contact"> <span>Contact</span></a>
                     </div>
+                    <div class="nav__menu--mobile">
+                        <span class="menu__icon" @click="openNavBar">
+                            <img src="@/assets/img/menu.png" alt="">
+                        </span>
+                        <div class="menu__list" :class="{ 'show': toggleNavBar }">
+                            <img id="close-menu" src="@/assets/img/x.png" alt="" style="padding: 0px 35px;"
+                                @click="closeNavBar">
+                            <span>About</span>
+                            <a href="#portfolio"><span>Portfolio</span></a>
+                            <a href="#contact"> <span>Contact</span></a>
+                        </div>
 
+                    </div>
                 </div>
             </div>
         </nav>
@@ -75,19 +77,20 @@
     <section class="bg--white">
         <div class="container">
             <div class="page-direction1">
-                <div class="img-direction" @click="prevSlide">
+                <div class="img-direction" :class="{ 'disabled': isButtonDisabled }" @click="prevSlide">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="48" height="48" rx="24" fill="#FF564F" />
                     </svg>
                     <div class="arrow-left"></div>
                 </div>
-                <div class="img-direction" @click="nextSlide">
+                <div class="img-direction" :class="{ 'disabled': isButtonDisabled }" @click="nextSlide">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="48" height="48" rx="24" fill="#FF564F" />
                     </svg>
                     <div class="arrow-right"></div>
                 </div>
-                <div class="page"><span class="current-page">{{ currentSlide }}</span> / <span class="total-page">{{ totalSlide }}</span></div>
+                <div class="page"><span class="current-page">{{ currentSlide }}</span> / <span class="total-page">{{
+                            totalSlide }}</span></div>
             </div>
             <div class="line--black"></div>
             <div class="advantage">
@@ -139,6 +142,7 @@ import { ref } from 'vue'
 
 export default {
     setup() {
+
         let clickOpenYoutube = ref(false)
         let htmlContent = ref('')
         const openYoutube = () => {
@@ -157,7 +161,7 @@ export default {
             toggleNavBar.value = false
             console.log(toggleNavBar.value);
         }
-        return { clickOpenYoutube, htmlContent, openYoutube, addLinkYoutobe,toggleNavBar,openNavBar,closeNavBar}
+        return { clickOpenYoutube, htmlContent, openYoutube, addLinkYoutobe, toggleNavBar, openNavBar, closeNavBar }
     },
     components: {
         Carousel,
@@ -168,29 +172,44 @@ export default {
             itemToShow: 1,
             snapAlign: 'center',
             wrapAround: true
-      
+
         },
         currentSlide: 1,
-        totalSlide:  2,
+        totalSlide: 2,
+        isButtonDisabled: false
 
     }),
     methods: {
         nextSlide() {
+            this.isButtonDisabled = true;
+            setTimeout(() => {
+                this.isButtonDisabled = false;
+            }, 1000)
             this.$refs.carouselHeader.next()
-            if(this.currentSlide !== this.totalSlide) {
+            if (this.currentSlide !== this.totalSlide) {
                 this.currentSlide++
             }
             else {
                 this.currentSlide = 1
             }
+
+
         },
         prevSlide() {
             this.$refs.carouselHeader.prev()
-            if(this.currentSlide !== 1) {
+            if (this.currentSlide !== 1) {
                 this.currentSlide--
             }
             else this.currentSlide = this.totalSlide
+            // Disable the button
+            this.isButtonDisabled = true;
+
+            // Enable the button after 1000 milliseconds (1 second)
+            setTimeout(() => {
+                this.isButtonDisabled = false;
+            }, 1000)
         }
+
     }
 
 };
@@ -212,5 +231,10 @@ export default {
 
 .intro>.carousel__viewport>.carousel__track>.carousel__slide {
     width: 100% !important;
+}
+
+.disabled {
+    opacity: 1;
+    pointer-events: none;
 }
 </style>

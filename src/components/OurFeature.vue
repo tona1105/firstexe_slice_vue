@@ -1,4 +1,6 @@
 <template>
+    <LazyComponent >
+</LazyComponent>
     <section class="bg--black">
         <div class="container">
             <div class="feature">
@@ -143,7 +145,7 @@ export default {
                 itemsToShow: 1,
                 snapAlign: 'center'
             },
-            800: {
+            768: {
                 itemsToShow: 2,
                 itemsToScroll: 2
             },

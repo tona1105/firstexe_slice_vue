@@ -1,21 +1,27 @@
-
 @media (max-width: 767px) {
     html {
         overflow-x: hidden;
     }
+
     .container {
-       
+
         width: 100%;
         padding: 0 23px;
     }
 
     /* Header */
     .intro {
+        padding-top: 100px;
         padding-bottom: 140px;
     }
+
+    nav {
+        padding: unset;
+    }
+
     .nav {
         padding-top: 24px;
-        margin-bottom: 53px;
+        margin-bottom: 30px;
     }
 
     .nav__menu {
@@ -178,9 +184,11 @@
         max-width: 100%;
         margin-top: 52px;
     }
+
     .feature__content {
         padding-top: 80px;
     }
+
     .feature__content--left,
     .feature__content--right {
         padding: 48px;
@@ -274,7 +282,7 @@
         padding-top: unset;
     }
 
-    .client__title h1{
+    .client__title h1 {
         font-size: 38px;
         font-weight: 900;
         line-height: 48px;
@@ -285,6 +293,7 @@
         top: -150px;
         left: 0px;
     }
+
     .client__description {
         margin-top: 36px;
         margin-bottom: 22px;
@@ -312,9 +321,10 @@
 
     .page-direction2 {
         left: 150px;
-        bottom:-129px;;
+        bottom: -129px;
+        ;
         top: unset;
-        
+
     }
 
     .img-direction {
@@ -379,9 +389,11 @@
     .blog__body {
         display: block;
     }
+
     .blog__content:nth-child(2) {
-        margin: 69px 0 ;
+        margin: 69px 0;
     }
+
     .blog__content img {
         width: 100%;
     }
@@ -390,6 +402,7 @@
     .footer {
         padding-top: 103px;
     }
+
     .footer__header {
         display: block;
     }
@@ -444,77 +457,109 @@
         right: 10%;
         opacity: 1;
     }
+
     .intro>.carousel__viewport>.carousel__track>.carousel__slide {
-        display:  block;
+        display: block;
     }
-    .feature__content> .carousel__viewport>.carousel__track>.carousel__slide {
-      display: block;
+
+    .feature__content>.carousel__viewport>.carousel__track>.carousel__slide {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 768px) {
+    .intro>.carousel__viewport>.carousel__track>.carousel__slide {
+        margin-right: 50px !important;
+    }
+    .advantage__title h1 {
+        font-style: 46px;
+    }
+    .advantage__description {
+        width: 375px;
     }
 }
 
 @media (min-width: 768px) and (max-width:1024px) {
+    nav {
+        padding: 0 15px;
+        width: 100vw;
+    }
+
     .container {
         padding: 0 15px;
         max-width: 100%;
     }
+
     .advantage__img--girl {
         height: 90%;
     }
+
     .project__content {
         margin-left: auto;
         max-width: 100%;
     }
+
     .project__content__img img {
         width: 90%;
         height: 90%;
         left: 0;
         height: 105%;
     }
+
     .introduce.item:last-child {
         width: auto !important;
     }
+
     .introduce__img--main,
     .introduce__img--main.main2 {
         width: 50%;
         left: 50%;
     }
+
     .introduce__img--main img {
         width: 90% !important;
     }
+
     .client__content {
         left: 45vw;
     }
+
     .blog__body {
         grid-template-columns: calc(100% / 2) calc(100% / 2);
-        
+
     }
+
     .blog__content {
-        margin:  0 auto;
+        margin: 0 auto;
         margin-bottom: 20px;
     }
+
     /* Slider */
     .intro>.carousel__viewport>.carousel__track>.carousel__slide {
         width: 100% !important;
-        margin-right: 23px;
+        margin-right: 30px;
     }
+
     .intro>.carousel__viewport {
         width: calc(100vw - 46px) !important;
     }
-    .feature__content > .carousel__viewport > .carousel__track > .carousel__slide {
+
+    .feature__content>.carousel__viewport>.carousel__track>.carousel__slide {
         width: 100% !important;
         margin-right: unset !important;
     }
-    .client__content> .carousel__viewport>.carousel__track>.carousel__slide {
+
+    .client__content>.carousel__viewport>.carousel__track>.carousel__slide {
         display: block;
-      }
+    }
 
 }
-@media (min-width: 1025px){
-    .feature__content > .carousel__viewport > .carousel__track > .carousel__slide {
+
+@media (min-width: 1025px) {
+    .feature__content>.carousel__viewport>.carousel__track>.carousel__slide {
         display: block;
         text-align: left;
         width: 570px !important;
         margin-right: 15px;
     }
 }
-    

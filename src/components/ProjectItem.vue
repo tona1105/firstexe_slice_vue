@@ -22,8 +22,8 @@ export default {
         }
     },
     methods: {
-        getImgPatch(a) {
-            return require('@/assets/img/' + a) 
+        getImgPatch(imgsrc) {
+            return require('@/assets/img/' + imgsrc ) 
         }
     }
 }
