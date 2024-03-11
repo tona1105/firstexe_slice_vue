@@ -11,7 +11,7 @@
         <div class="project__content__img">
             <img :src="getImgPatch(item.imgsrc)" alt="">
         </div>
-    </div>`
+    </div>
 </template>
 <script>
 

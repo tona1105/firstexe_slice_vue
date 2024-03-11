@@ -469,7 +469,7 @@
 
 @media (min-width: 768px) and (max-width: 768px) {
     .intro>.carousel__viewport>.carousel__track>.carousel__slide {
-        margin-right: 50px !important;
+        margin-right: 30px !important;
     }
     .advantage__title h1 {
         font-style: 46px;

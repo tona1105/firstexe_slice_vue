@@ -1,6 +1,6 @@
 <template>
     <!-- Header + Intro -->
-    <section class="bg--black">
+    <section class="bg--black ">
         <nav>
             <div class="container">
                 <div class="nav">
@@ -93,7 +93,7 @@
                             totalSlide }}</span></div>
             </div>
             <div class="line--black"></div>
-            <div class="advantage">
+            <div class="advantage ">
                 <div class="advantage__img">
                     <div class="advantage__img--girl" @click="openYoutube"
                         :style="{ display: clickOpenYoutube ? 'none' : 'block' }">

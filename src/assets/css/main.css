@@ -62,7 +62,21 @@ a:hover {
     background-color: var(--black);
 }
 
+.fadeTop {
+    animation: showOut 2s;
+    z-index: 1;
+}
 
+@keyframes showOut {
+    from {
+        transform: translateY(90px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
 
 .container {
     max-width: 1170px;
@@ -245,7 +259,7 @@ nav {
 }
 
 .page-direction1 {
-    margin-top: 139px;
+    margin-top: 200px;
     display: flex;
     align-items: center;
     position: relative;

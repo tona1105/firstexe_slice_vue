@@ -1,6 +1,4 @@
 <template>
-    <LazyComponent >
-</LazyComponent>
     <section class="bg--black">
         <div class="container">
             <div class="feature">
@@ -133,7 +131,7 @@ export default {
     data: () => ({
         settings: {
             
-            autoplay: 0,
+            autoplay: 3000,
             wrapAround: true,
             itemsToScroll: 1,
             transition: 1000,

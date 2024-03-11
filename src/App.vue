@@ -1,17 +1,17 @@
 <template>
-   <IntroAdvantage/>
-   <!-- Feature -->
-    <OurFeature/>
-   <!-- Project -->
-   <OurProject/>
-   <!-- Client Comment -->
-   <ClientComment/>
-   <!-- Logo -->
-   <LogoBrand/>
-   <!-- Blog -->
-   <OurBlog/>
-   <!-- Footer -->
-   <FooterProject/>
+  <IntroAdvantage />
+  <!-- Feature -->
+  <OurFeature class="view" />
+  <!-- Project -->
+  <OurProject class="view" />
+  <!-- Client Comment -->
+  <ClientComment class="view" />
+  <!-- Logo -->
+  <LogoBrand class="view" />
+  <!-- Blog -->
+  <OurBlog class="view" />
+  <!-- Footer -->
+  <FooterProject class="view" />
 </template>
 
 <script>
@@ -32,15 +32,20 @@ export default {
     LogoBrand,
     OurBlog,
     FooterProject,
-    
+  },
+  methods: {
+
   }
 }
+
+
 </script>
 
 <style>
-.v-lazy-component.v-lazy-component--loading{
+.v-lazy-component.v-lazy-component--loading {
   filter: blur(20px);
 }
+
 .v-lazy-component.v-lazy-component--loaded {
   filter: blur(0);
   transition: filter 2s;
