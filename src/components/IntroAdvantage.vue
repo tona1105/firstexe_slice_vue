@@ -8,7 +8,7 @@
                         <a href="#">AGENCY</a>
                     </div>
                     <div class="nav__menu">
-                        <span>About</span>
+                        <a href="#"><span>About</span></a>
                         <a href="#portfolio"><span>Portfolio</span></a>
                         <a href="#contact"> <span>Contact</span></a>
                     </div>

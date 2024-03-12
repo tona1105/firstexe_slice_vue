@@ -1,5 +1,5 @@
 <template>
-      <footer class="bg--black">
+    <footer class="bg--black">
         <div class="container" id="contact">
             <div class="footer__header">
                 <div class="footer__title">
@@ -28,7 +28,9 @@
                 </div>
                 <div class="footer__menu">
                     <h4>MENU</h4>
-                    <p>About</p>
+                    <a href="#">
+                        <p>About</p>
+                    </a>
                     <p><a href="#portfolio">Portfolio</a></p>
                     <p><a href="#blog">Blog</a></p>
                     <p>Testimonials</p>
@@ -61,3 +63,6 @@
         </div>
     </footer>
 </template>
+
+<script>
+</script>

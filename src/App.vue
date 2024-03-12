@@ -1,17 +1,20 @@
 <template>
-  <IntroAdvantage />
-  <!-- Feature -->
-  <OurFeature class="view" />
-  <!-- Project -->
-  <OurProject class="view" />
-  <!-- Client Comment -->
-  <ClientComment class="view" />
-  <!-- Logo -->
-  <LogoBrand class="view" />
-  <!-- Blog -->
-  <OurBlog class="view" />
-  <!-- Footer -->
-  <FooterProject class="view" />
+  <div>
+    <IntroAdvantage />
+    <!-- Feature -->
+    <OurFeature class="view" />
+    <!-- Project -->
+    <OurProject class="view" />
+    <!-- Client Comment -->
+    <ClientComment class="view" />
+    <!-- Logo -->
+    <LogoBrand class="view" />
+    <!-- Blog -->
+    <OurBlog class="view" />
+    <!-- Footer -->
+    <FooterProject class="view" />
+  </div>
+
 </template>
 
 <script>
@@ -23,6 +26,7 @@ import LogoBrand from './components/LogoBrand.vue';
 import OurBlog from './components/OurBlog.vue';
 import FooterProject from './components/FooterProject.vue';
 export default {
+
   name: 'App',
   components: {
     IntroAdvantage,

@@ -63,7 +63,7 @@ a:hover {
 }
 
 .fadeTop {
-    animation: showOut 2s;
+    animation: showOut 1s;
     z-index: 1;
 }
 
